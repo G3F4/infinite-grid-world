@@ -6,7 +6,6 @@ import {
   StandardMaterial,
   Vector3,
   HemisphericLight,
-  ArcRotateCamera,
   Mesh,
   Color4,
   FlyCamera,
