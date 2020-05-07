@@ -1,0 +1,38 @@
+import { Color4, Quaternion, Vector2, Vector3 } from 'babylonjs';
+declare var DynamicTerrain: {
+    (name: any, options: any, scene: any): void;
+    GetHeightFromMap(x: any, z: any, mapData: any, mapSubX: any, mapSubZ: any, options: any, inverted?: boolean): any;
+    _GetHeightFromMap(x: any, z: any, mapData: any, mapSubX: any, mapSubZ: any, mapSizeX: any, mapSizeZ: any, options: any, inverted: any): any;
+    ComputeNormalsFromMapToRef(mapData: any, mapSubX: any, mapSubZ: any, normals: any, inverted: any): void;
+    CreateMapFromHeightMap(heightmapURL: any, options: any, scene: any): Float32Array;
+    CreateMapFromHeightMapToRef(heightmapURL: any, options: any, data: any, scene: any): void;
+    CreateUVMapToRef(subX: any, subZ: any, mapUVs: any): void;
+    CreateUVMap(subX: any, subZ: any): Float32Array;
+    _ComposeToRef(scale: any, rotation: any, translation: any, m: any): void;
+    _CopyArrayValuesFromToRef(source: any, start: any, nb: any, target: any): void;
+    _vertex: {
+        position: Vector3;
+        uvs: Vector2;
+        color: Color4;
+        lodX: number;
+        lodZ: number;
+        worldPosition: Vector3;
+        mapIndex: number;
+    };
+    _v1: Vector3;
+    _v2: Vector3;
+    _v3: Vector3;
+    _v4: Vector3;
+    _vAvB: Vector3;
+    _vAvC: Vector3;
+    _norm: Vector3;
+    _bbMin: Vector3;
+    _bbMax: Vector3;
+    _pos: Vector3;
+    _scl: Vector3;
+    _quat: Quaternion;
+    _mat: Float32Array;
+    _matZero: Float32Array;
+    _col: Float32Array;
+};
+export default DynamicTerrain;
